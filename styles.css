@@ -66,8 +66,8 @@ body {
 #yay {
     max-width: 100%; /* Optional: ensures image fits well on the screen */
     position: absolute; /* Positions the image relative to the container */
-    width: 1699px; /* Optional: resize the image */
-    height: 864px;
+    width: max-content; /* Optional: resize the image */
+    height: max-content;
 }
 
 /* Define the keyframes for the appearance animation */
@@ -103,4 +103,5 @@ body {
     opacity: 1;
     visibility: visible;
   }
+
 }
