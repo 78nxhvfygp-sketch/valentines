@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head1>
+<body1>
+    
+    <div id = "screen1">
+    <div class="top-div">
+    <h1 class="title">Will you be my valentine?</h1>
+    </div>
+    <div class="centered-div">
+    <button class="yes" onclick="changeScreen()">Yes</button>
+    <button id="no">No</button>
+
+     
+
+
+    
+    <!-- This is the image that will be shown -->
+    <img id="myImage" src="images/shark-removebg-preview (3).png" alt="shark">
+    
+
+    <script src="script.js"></script>
+    </div>
+    </div>
+
+    <div id="screen2" style="display: none;">
+    <img id="yay" src="images/Blue Illustrative Organic Ocean Habitat Presentation.jpg" alt="shesaidyes">
+    </div>
+    <script>
+        
+       function showImage() {
+    const image = document.getElementById('myImage');
+    if (image.style.display === 'none' || image.style.display === '') {
+        image.style.display = 'block';
+    } else {
+        image.style.display = 'none'; // Optional: click the button again to hide it
+    }
+}
+
+// Get the button element and add a click event listener
+const button = document.getElementById('no');
+button.addEventListener('click', showImage);
+
+        function yesclicked(){
+            
+        }
+    </script>
+</body1>
+</html>

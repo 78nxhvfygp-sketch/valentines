@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.title {
+    color: #47a8de;
+    background-color: #0e3ea4;
+    font-family: 'Playfair-Display', serif;
+    font-weight: 700;
+    font-size: 120px;
+    border: 10px solid #47a8de;
+    margin: 10px;
+    text-align: center;
+}
+
+button {
+    color: #47a8de;
+    background-color: #0e3ea4;
+    font-family: 'Playfair-Display', serif;
+    font-weight: 700;
+    font-size: 100px;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    border: 10px solid #47a8de;
+    margin: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*.no:active {
+            transform: scale(0.98);*/
+            /* Scaling button to 0.98 to its original size */
+           /* box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);*/
+            /* Lowering the shadow */
+        /*}*/
+        
+.centered-div {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #032d59;   
+}
+/*.top-div {
+    height: 100vh;
+    display: flex;
+    justify-content: top;
+    align-items: top;
+}*/
+
+#myImage {
+    display: none; /* This hides the image initially */
+    margin-top: 30px;
+    max-width: 100%; /* Optional: ensures image fits well on the screen */
+    position: absolute; /* Positions the image relative to the container */
+    width: 800px; /* Optional: resize the image */
+    height: auto;
+    z-index: 2; /* Ensures the image is on top of the button */
+    visibility: visible;
+    animation-name: horizontal-move;
+    animation-duration: .8s;      /* Duration of one cycle */
+    animation-fill-mode: forwards;
+}
+
+#yay {
+    max-width: 100%; /* Optional: ensures image fits well on the screen */
+    position: absolute; /* Positions the image relative to the container */
+    width: 1699px; /* Optional: resize the image */
+    height: 864px;
+}
+
+/* Define the keyframes for the appearance animation */
+
+#no {
+  position: relative; /* Optional, good practice for stacking context */
+  z-index: 1; /* Button is in the normal flow, setting z-index for clarity */
+}
+
+
+@keyframes horizontal-move {
+  0% {
+    transform: translateX(600px);  /* Start position: normal Y position */
+  }
+  /*99% {
+   opacity: 1;
+  }*/
+  100% {
+    transform: translateX(300px); /* End position: 20px up */
+  }
+}
+
+@keyframes horizontal-move2 {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  99% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
